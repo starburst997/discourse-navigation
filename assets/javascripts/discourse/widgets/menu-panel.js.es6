@@ -6,16 +6,17 @@ createWidget('menu-links', {
     const links = [].concat(attrs.contents());
     const liOpts = {};
 
-    result.push(h('hr'));
-    const links2 = ['test']
-    console.log('test', links);
-    //result.push(h('ul.menu-links.columned', links2.map(l => h('li', liOpts, l))));
-
     if (attrs.heading) {
       liOpts.className = 'header';
     }
 
     const result = [];
+
+    result.push(h('hr'));
+    const links2 = ['test']
+    console.log('test', links);
+    //result.push(h('ul.menu-links.columned', links2.map(l => h('li', liOpts, l))));
+
     result.push(h('ul.menu-links.columned', links.map(l => h('li', liOpts, l))));
 
     result.push(h('div.clearfix'));
